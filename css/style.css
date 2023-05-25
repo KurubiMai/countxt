@@ -154,6 +154,7 @@ li .dustIcon {
     margin-left: 48px;
     text-align: left;
     color: black;
+    background-color: rgba(rgb(0, 0, 0), 0.04);
 }
 
 button >img {
