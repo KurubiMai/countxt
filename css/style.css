@@ -341,9 +341,18 @@ textarea ::placeholder {
 
 /* スマートフォン用レスポンシブ */
 @media screen and (max-width: 520px) {
+    body {
+        padding-right: 24px;
+    }
+
+    .countxt {
+        margin-left: 24px;
+    }
+    
     .txt-contents{
         border-bottom: none;
         margin-bottom: 0;
+        margin-left: 24px;
         padding-bottom: 0;
     }
 
@@ -365,6 +374,6 @@ textarea ::placeholder {
     .right {
         width: 100%;
         min-width: 200px;
-
+        padding-left: 24px;
     }
 }
