@@ -7,7 +7,7 @@ const txtCount2 = document.getElementById("txtCount-2");
 // 文字数をカウントする関数
 countTexts = () => {
   const text = textArea.value;
-  const textLength = text.length;
+  const textLength = text.replace(/\n+/g, '').length;
   const textLengthWithoutSpaces = text.replace(/\s+/g, '').length;
 
   // 現在の文字数を表示

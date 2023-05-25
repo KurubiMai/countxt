@@ -84,7 +84,7 @@ p >.number {
 }
 
 ul {
-    width: 100%;
+    width: calc(100% + 30px);
     max-width: 524px;
     height: calc(100vh - 382px);
     margin-left: 32px;
@@ -169,7 +169,7 @@ button >img {
 /* 右側-------------------------------------------- */
 
 .right {
-    z-index: 1;
+    z-index: 0;
     box-sizing: border-box;
     display: flex;
     flex: 1;
