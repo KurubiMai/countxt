@@ -30,7 +30,7 @@ const addMemo = () => {
     const timestamp = new Date();
     const memoList =document.getElementById('memoList');
     const newId = uuid.v4();
-    // 以下for文でidをローカルストレージ以外から取得できる方法を考える。(タイムスタンプ案)
+    // 以下for文でidをローカルストレージ以外から取得できる方法を考える。
     const obj ={titleData : '無題のメモ', textData : '', time: timestamp};
     localStorage.setItem(newId, JSON.stringify(obj));
     let admemo = `
@@ -58,8 +58,6 @@ const addMemo = () => {
     modalOpen();
 }
 
-console.log(localStorage);
-
 //---------------選択する関数
 let number ;
 const selectList = (id) => {
@@ -79,7 +77,6 @@ const selectList = (id) => {
 
     // ローカルストレージから任意のidのデータを取得
     let getKey = JSON.parse(localStorage.getItem(id.toString()));
-    console.log(getKey);
 
     // ローカルストレージから取得した任意のidのtextData,titleDataを、右に表示させる
     title.value = getKey.titleData;
@@ -113,7 +110,7 @@ textArea.addEventListener('input',() =>{
 // ローカルストレージの全てのキーを取り出し、リスト要素に代入させmemoListの中に表示させる
 // ローカルストレージのキーを取得
 const getNewId = Object.keys(localStorage);
-console.log(getNewId);
+
 // pushされた要素を配列化させる定数
 const getTimestanp = [];
 
@@ -165,7 +162,6 @@ button.addEventListener('click', addMemo);
 const firstListSelect = () =>{
     const gtList = document.getElementById("memoList");
     const firstLIst = gtList.firstElementChild.id
-    console.log(firstLIst);
     selectList(firstLIst);
 }
 
@@ -173,7 +169,6 @@ const firstListSelect = () =>{
 const modalOpen = () => {
     const getDustIcon = document.getElementsByClassName('dustIcon');
     for (let i=0; i < getDustIcon.length; i++){
-        console.log(getDustIcon);
         getDustIcon[i].onclick = () => {
             let modal = document.getElementById("ModalId");
             modal.style.display = "block";
