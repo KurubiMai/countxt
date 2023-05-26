@@ -343,7 +343,7 @@ textarea ::placeholder {
 
 
 /* スマートフォン用レスポンシブ */
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 590px) {
     body {
         overflow-x: hidden;
         padding-right: 24px;
